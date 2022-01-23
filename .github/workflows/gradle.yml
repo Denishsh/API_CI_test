@@ -30,5 +30,7 @@ jobs:
       with:
         arguments: build
     - name: Run jar
-      working-directory: .artifacts
       run: java -jar ./artifacts/app-mbank.jar &
+      
+    - name: test echo
+      run: echo The username is ${{ inputs.username }}
